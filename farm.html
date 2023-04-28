@@ -3,6 +3,7 @@
 <head>
     <title>VegZa</title>
     <link rel="stylesheet" type="text/css" href="farm.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
@@ -11,10 +12,10 @@
        </div>
         
         <nav class="navigation">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Product</a>
-        <a href="#">Customers</a>
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Product">Product</a>
+        <a href="#Customers">Customers</a>
         <button class="button-popup">Login</button>
     </nav>
     </header>
@@ -83,6 +84,28 @@
         </div>
 
     </div>
+    <!-- Home -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span>We are VegZa</span>
+                    <h1>Choose vegitables <br> fruits</h1>
+                    <a href="#" class="btn-shop">Shop Now <ion-icon name="arrow-forward"></ion-icon></a>
+                </div>
+                
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          
+
+    </section>
+
+
+    <!--Swiper to js-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!--link to js-->
     <script src="script.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
