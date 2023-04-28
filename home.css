@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+ *{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+ }
+ .container{
+    text-align: left;
+    bottom: -100px;
+    position: relative;
+    width: 100%;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    background-repeat : no-repeat ;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+ }
+ .container img{
+    padding: 50px 0;
+    width: 700px;
+    position: absolute;
+    bottom: 50px;
+    right: 200px;
+    align-items: center;
+    top: 0px;
+    border-radius: 20rem;
+ }
+ .home-text{
+    top: 500;
+    padding: 150px 150px;
+ }
+ .home-text span{
+    font-weight: 900;
+    
+    color: rgb(0, 107, 9);
+ }
+ .home-text h1{
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+ }
+ .btn-shop{
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    background: rgb(0, 107, 9) ;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+    max-width: 160px;
+ }
+ .btn-shop .bx{
+    padding: 4px;
+    background: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 1rem;
+    font-size: 20px;
+    margin: auto;
+ }
+ .btn-shop:hover{
+    background-color: #ce5e2a;
+    transition: 0.2s ease;
+ }
+ 
