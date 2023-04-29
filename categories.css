@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+ *{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+ }
+ .categories{
+    padding: 150px 100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .btn-shop{
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    background: rgb(0, 107, 9) ;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+    max-width: 160px;
+ }
+ .btn-shop .bx{
+    padding: 4px;
+    background: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 1rem;
+    font-size: 20px;
+    margin: auto;
+ }
+ .btn-shop:hover{
+    background-color: #ce5e2a;
+    transition: 0.2s ease;
+ }
+ .categories-fruit{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 3rem;
+    position: absolute;
+    top: 10rem;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+ }
+ .categories-fruit .box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px ;
+    box-shadow: 1px 2px 11px 4px rgb(14 55 54/15%);
+    border-radius: 0.5rem;
+ }
+ .categories-fruit .box img{
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+ }
+ .categories-fruit .box h2{
+    font-size: 1rem;
+    font-weight: 600;
+ }
+ .categories-fruit .box span{
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+ }
+ .categories-fruit .box .bx{
+    padding: 10px;
+    background: rgb(0, 107, 9);
+    color: aliceblue;
+    border-radius: 5rem;
+    margin-top: 2rem;
+    position: absolute;
+    bottom: -8%;
+    display: none;
+
+ }
+ .categories-fruit .box .bx:hover{
+    background: #ce5e2a;
+    transition: 0.2s all linear;
+ } 
+ .categories-fruit .box:hover .bx{
+    display: block;
+    transition: 0.2s all linear;
+ }
+ .box1{
+    /*background: #d8d2ae;*/
+    width: 50%;
+    height: 200px;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+ }
+ .box2{
+    background: #b69897;
+    width: 50%;
+    height: 200px;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+ }
+ .box3{
+    background: #999680;
+    width: 50%;
+    height: 200px;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+ }
+ .box4{
+    background: #d4d0b4;
+    width: 50%;
+    height: 200px;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+ }
+ .box5{
+    background: #dfdac0;
+    width: 50%;
+    height: 200px;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+ }
+ .box6{
+    background: #dbd6bb;
+    width: 50%;
+    height: 200px;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+ }
