@@ -92,5 +92,98 @@
  .swiper-button-prev::after{
    display: none;
  }
- 
- 
+ .about{
+   max-width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(21rem, auto));
+   align-items: center;
+   gap: 15rem;
+   margin-top: -20px;
+   
+   
+ }
+ .about-text span{
+   font-weight: 800;
+   text-transform: uppercase;
+   color: #0d7712;
+ }
+ .about-text p{
+   margin: 0.5rem 0 1rem;
+ }
+ .about img{
+   max-width: 500px;
+   padding: 50px 30px;
+   border-radius: 1rem;
+ }
+ /*Custemers*/
+ .customers{
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+ .customers h2 {
+   text-align: center;
+   font-size: 1.6rem;
+   font-weight: 600;
+ }
+ .customer-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(280px, auto));
+   
+   gap: 2.5rem;
+   margin-top: 2rem;
+ }
+ .customer-container .review-profile-2 img{
+ width: 452px;
+ height: 261px;
+}
+.customer-container .review-profile-1 img{
+   width: 452px;
+   height: 350px;
+}
+  .customer-container .review-profile-3 img{
+   width: 452px;
+   height: 350px;
+}
+.customer-container .box{
+   padding: 20px;
+   box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+   border-radius: 0.5rem;
+   border-bottom: 7px solid #000000;
+}
+.customer-container .box:hover{
+   transform: translateY(10px);
+   transition: 0.2s all linear;
+}
+.customer-container .box .bx{
+   font-size: 24px;
+   color: #0d7712;
+}
+.customer-container .box .stars .bx{
+   font-size: 1rem;
+   color: #c4a79a;
+}
+.customer-container .box p{
+   font-size: 0.938rem;
+
+}
+.review-profile{
+   display: flex;
+   align-items: center;
+   margin-top: 1rem;
+   column-gap: 0.5rem;
+
+}
+.review-profile img{
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   object-fit: cover;
+   object-position: center;
+}
+.review-profile h3{
+   font-size: 1rem;
+   font-weight: 600;
+}
