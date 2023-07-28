@@ -22,9 +22,45 @@
         </ul>
         <!-- profile-->
         <div class="profile">
-            <img src="img/profile img.jpg">
+            <img src="img/profile img.jpg" class="user-pic" onclick="toggleMenu()">
             <span>Hasun Thiwanka</span>
-            <ion-icon name="arrow-dropdown"></ion-icon>
+            
+             <div class="sub-menu-swap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="img/profile img.jpg" alt="">
+                        <h2>Hasun Thiwank</h2>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="img/user-circle-solid-24.png" alt="">
+                        <p>Edit profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="img/cart-download-solid-24.png" alt="">
+                        <p>create seller account</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="img/cog-solid-24.png" alt="">
+                        <p>Settings & privacy</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="img/help-circle-solid-24.png" alt="">
+                        <p>Help & support</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="img/log-out-circle-solid-24.png" alt="">
+                        <p>Log out</p>
+                        <span>></span>
+                    </a>
+
+                </div>
+             </div>
+               
         </div>
         </header>
         <section class="home" id="home">
@@ -173,5 +209,11 @@
     <!--link to js-->
     <script src="home.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+function toggleMenu(){
+  subMenu.classList.toggle("open-menu");
+}
+    </script>
 </body>
 </html>
