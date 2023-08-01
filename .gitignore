@@ -1,7 +1,1 @@
-db_init.php
-$servername="localhost";
-$username="root";
-$password="";
-$database_name="vegza_login";
-
-$conn=mysqli_connect($servername,$username,$password,$database_name);
+includes/dbh.inc.php
