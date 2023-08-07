@@ -1,23 +1,24 @@
 <?php
-$servername="localhost";
-$username="root";
-$password="";
-$database_name="vegza_login";
+$env = parse_ini_file('../.env');
 
-$connection = new mysqli($servername,$username,$password,$database_name);
+$servername = $env["SERVER"];
+$username = $env["USERNAME"];
+$password = $env["PASSWORD"];
+$database_name = $env["DATABASE"];
+$port = $env["PORT"];
 
-if($connection -> connect_error){
-    die("Connection error");
+$connection = new mysqli($servername, $username, $password, $database_name, $port);
 
-}else{
-    echo 'connection ok';
+if ($connection->connect_error) {
+   die("Connection error");
+} else {
+   echo 'connection ok';
 }
 
-function is_logged_in(){
-    $uname = $_SESSION["uname"];
-    $pw = $_SESSION["pw"];
+function is_logged_in()
+{
+   $uname = $_SESSION["uname"];
+   $pw = $_SESSION["pw"];
 
-    return true;
+   return true;
 }
-
-?>
