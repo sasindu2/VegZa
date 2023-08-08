@@ -11,8 +11,6 @@ $connection = new mysqli($servername, $username, $password, $database_name, $por
 
 if ($connection->connect_error) {
    die("Connection error");
-} else {
-   echo 'connection ok';
 }
 
 function is_logged_in()

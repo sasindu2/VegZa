@@ -1,35 +1,18 @@
 <?php
-# /includes/login.insert.php
-/*
+include 'config.php';
 
-food items insert -> /api/food_insert.php
-food_name, description, price
+$userName = $_POST['usersName'];
+$userEmail = $_POST['usersEmail'];
+$userPwd = $_POST['usersPwd'];
 
+$sql = "INSERT INTO users (usersName, usersEmail, usersPwd) VALUES (?, ?, ?)";
+$statment = $connection->prepare($sql);
 
+$statment->bind_param("sss", $userName, $userEmail, $userPwd);
 
-# POST Request
-/* 
-username, email, password -> inputs
-ok -> ok
-error -> error
-*/
-
-   include 'config.php';
-
-   $userName = $_POST['username'];
-   $userEmail = $_POST['email'];
-   $userPwd = $_POST['password'];
-
-   $sql = "insert into users (usersName, usersEmail, usersPwd) values(?,?,?)";
-   $statment = $connection->prepare($sql);
-
-   $statment->bind_param("sss" , $userName , $userEmail , $userPwd);
-
-   if($statment->execute()){
-      echo 'Insert data success !';
-   }else{
-      echo 'Insert data error !';
-   }
-
-?>
- 
+if ($statment->execute()) {
+   header("Location: ../login.php");
+   exit;
+} else {
+   echo 'Insert data error !';
+}

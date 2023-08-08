@@ -1,13 +1,3 @@
-<?php
-include "."
-
-if(!is_logged_in()){
-	header("Location: ./login.html")
-	exit;
-}
-
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
