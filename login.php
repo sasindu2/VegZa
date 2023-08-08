@@ -21,15 +21,15 @@
 
 			<div class="form-box login">
 				<h2>Login</h2>
-				<form action="home.html" method="post">
+				<form action="home.php" method="post">
 					<div class="input-box">
 						<span class="icon"><ion-icon name="mail"></ion-icon> </span>
-						<input type="text" required />
+						<input type="text" name="email" required />
 						<label>Email</label>
 					</div>
 					<div class="input-box">
 						<span class="icon"><ion-icon name="lock"></ion-icon> </span>
-						<input type="password" required />
+						<input type="password" name="password" required />
 						<label>Password</label>
 					</div>
 					<div class="remember-forgot">
@@ -45,20 +45,20 @@
 
 			<div class="form-box register">
 				<h2>Registation</h2>
-				<form action="login.html" method="post">
+				<form action="includes/sign_up.php" method="post">
 					<div class="input-box">
 						<span class="icon"><ion-icon name="person"></ion-icon> </span>
-						<input type="text" required />
+						<input type="text" name="usersName" required />
 						<label>Username</label>
 					</div>
 					<div class="input-box">
 						<span class="icon"><ion-icon name="mail"></ion-icon> </span>
-						<input type="text" required />
+						<input type="text" name="usersEmail" required />
 						<label>Email</label>
 					</div>
 					<div class="input-box">
 						<span class="icon"><ion-icon name="lock"></ion-icon> </span>
-						<input type="password" required />
+						<input type="password" name="usersPwd" required />
 						<label>Password</label>
 					</div>
 					<div class="remember-forgot">
