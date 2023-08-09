@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>VegZa category veg Page</title>
+		<title>VegZa category Page</title>
 		<link rel="stylesheet" type="text/css" href="css/nav.css" />
-		<link rel="stylesheet" type="text/css" href="css/categories-veg.css" />
+		<link rel="stylesheet" type="text/css" href="css/categories-fruit.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 	</head>
 	<body>
-		<header>
-			<div class="logo">
-				<img src="img/logo.jpg" alt="Logo" />
-			</div>
-			<ul class="navigation">
-				<a href="#home.html" class="home-active">Home</a>
-				<a href="#categories">Categories</a>
-
-				<a href="#about">About</a>
-				<a href="#customers">Customers</a>
-			</ul>
-			<!-- profile-->
-			<div class="profile">
-				<img src="img/profile img.jpg" />
-				<span>Hasun Thiwanka </span>
-				<ion-icon name="arrow-dropdown"></ion-icon>
-			</div>
-		</header>
+	   <?php
+ 		include 'includes/nav.php';
+	   ?>
 
 		<section class="categories" id="categories">
-			<h2><a href="home.php">Categories</a> > vegitable</h2>
+			<h2><a href="home.php">Categories</a> > fruits</h2>
 			<!--Container content-->
-			<div class="categories-vegitable">
+			<div class="categories-fruit">
 				<!--Box 1-->
 				<div class="box">
-					<img src="img/carrot.jpg" alt="" />
-					<span>Fresh carrot</span>
+					<img src="img/pineapple.jpg" alt="" />
+					<span>Fresh Pineapple</span>
 					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
 					<h3 class="price">rs.400<span>/kg</span></h3>
 					<i class="bx bx-cart-alt"></i>
@@ -43,8 +28,8 @@
 				</div>
 				<!--Box 2-->
 				<div class="box">
-					<img src="img/chili.jpg" alt="" />
-					<span>Fresh Chili</span>
+					<img src="img/strawberry.jpg" alt="" />
+					<span>Fresh Pineapple</span>
 					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
 					<h3 class="price">rs.400<span>/kg</span></h3>
 					<i class="bx bx-cart-alt"></i>
@@ -54,8 +39,8 @@
 
 				<!--Box 3-->
 				<div class="box">
-					<img src="img/cabbage.jpg" alt="" />
-					<span>Fresh cabbage</span>
+					<img src="img/papaya.jpg" alt="" />
+					<span>Fresh Pineapple</span>
 					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
 					<h3 class="price">rs.400<span>/kg</span></h3>
 					<i class="bx bx-cart-alt"></i>
@@ -64,8 +49,8 @@
 				</div>
 				<!--Box 4-->
 				<div class="box">
-					<img src="img/Cauliflower.jpg" alt="" />
-					<span>Fresh Cauliflower</span>
+					<img src="img/pineapple.jpg" alt="" />
+					<span>Fresh Pineapple</span>
 					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
 					<h3 class="price">rs.400<span>/kg</span></h3>
 					<i class="bx bx-cart-alt"></i>
@@ -74,8 +59,8 @@
 				</div>
 				<!--Box 5-->
 				<div class="box">
-					<img src="img/garlic.jpg" alt="" />
-					<span>Fresh garlic</span>
+					<img src="img/pineapple.jpg" alt="" />
+					<span>Fresh Pineapple</span>
 					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
 					<h3 class="price">rs.400<span>/kg</span></h3>
 					<i class="bx bx-cart-alt"></i>
@@ -84,8 +69,8 @@
 				</div>
 				<!--Box 6-->
 				<div class="box">
-					<img src="img/okra.jpg" alt="" />
-					<span>Fresh okra</span>
+					<img src="img/pineapple.jpg" alt="" />
+					<span>Fresh Pineapple</span>
 					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
 					<h3 class="price">rs.400<span>/kg</span></h3>
 					<i class="bx bx-cart-alt"></i>

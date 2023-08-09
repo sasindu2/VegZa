@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include 'config.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -15,61 +15,13 @@ include 'config.php';
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 	</head>
 	<body>
-		<header>
-			<div class="logo">
-				<img src="img/logo.jpg" alt="Logo" />
-			</div>
-			<ul class="navigation">
-				<a href="#home" class="home-active">Home</a>
-				<a href="#categories">Categories</a>
 
-				<a href="#about">About</a>
-				<a href="#customers">Customers</a>
-			</ul>
-			
-			<!-- profile-->
-			<div class="profile">
-			
-				<img src="img/profile img.jpg" class="user-pic" onclick="toggleMenu()" />
-				<span>kasun thiwanka</span>
-
-				<div class="sub-menu-swap" id="subMenu">
-					<div class="sub-menu">
-						<div class="user-info">
-							<img src="img/profile img.jpg" alt="" />
-							<h2> kasun thiwanka </h2>
-						</div>
-						<hr />
-						<a href="#" class="sub-menu-link">
-							<img src="img/user-circle-solid-24.png" alt="" />
-							<p>Edit profile</p>
-							<span>></span>
-						</a>
-						<a href="#" class="sub-menu-link">
-							<img src="img/cart-download-solid-24.png" alt="" />
-							<p>create seller account</p>
-							<span>></span>
-						</a>
-						<a href="#" class="sub-menu-link">
-							<img src="img/cog-solid-24.png" alt="" />
-							<p>Settings & privacy</p>
-							<span>></span>
-						</a>
-						<a href="#" class="sub-menu-link">
-							<img src="img/help-circle-solid-24.png" alt="" />
-							<p>Help & support</p>
-							<span>></span>
-						</a>
-						<a href="#" class="sub-menu-link">
-							<img src="img/log-out-circle-solid-24.png" alt="" />
-							<p>Log out</p>
-							<span>></span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</header>
-		<section class="home" id="home">
+	<?php
+ 		include 'includes/nav.php';
+	?>
+	
+							
+	<section class="home" id="home">
 			<div class="swiper-wrapper">
 				<!--SLIDE 1-->
 				<div class="swiper-slide container">
@@ -79,7 +31,7 @@ include 'config.php';
 							Choose vegitable <br />
 							and fruit
 						</h1>
-						<a href="categories-veg.html" class="btn-shop">Shop Now <i class="bx bx-right-arrow-alt"></i></a>
+						<a href="categories-veg.php" class="btn-shop">Shop Now <i class="bx bx-right-arrow-alt"></i></a>
 					</div>
 					<img src="img/home.veg.jpg" />
 				</div>
@@ -91,7 +43,7 @@ include 'config.php';
 							Choose vegitable <br />
 							and fruit
 						</h1>
-						<a href="categories-fruit.html" class="btn-shop">Shop Now <i class="bx bx-right-arrow-alt"></i> </a>
+						<a href="categories-fruit.php" class="btn-shop">Shop Now <i class="bx bx-right-arrow-alt"></i> </a>
 					</div>
 					<img src="img/home.fruits.jpg" />
 				</div>
@@ -180,6 +132,8 @@ include 'config.php';
 				</div>
 			</div>
 		</section>
+
+
 		<!--Footer-->
 		<section class="footer" id="footer">
 			<div class="footer-box">
@@ -220,11 +174,11 @@ include 'config.php';
 		<!--link to js-->
 		<script src="js/home.js"></script>
 		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-		<script>
+		<!--<script>
 			let subMenu = document.getElementById("subMenu");
 			function toggleMenu() {
 				subMenu.classList.toggle("open-menu");
 			}
-		</script>
+		</script>-->
 	</body>
 </html>
