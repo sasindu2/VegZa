@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+include 'config.php';
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,16 +26,18 @@
 				<a href="#about">About</a>
 				<a href="#customers">Customers</a>
 			</ul>
+			
 			<!-- profile-->
 			<div class="profile">
+			
 				<img src="img/profile img.jpg" class="user-pic" onclick="toggleMenu()" />
-				<span>Hasun Thiwanka</span>
+				<span>kasun thiwanka</span>
 
 				<div class="sub-menu-swap" id="subMenu">
 					<div class="sub-menu">
 						<div class="user-info">
 							<img src="img/profile img.jpg" alt="" />
-							<h2>Hasun Thiwanka</h2>
+							<h2> kasun thiwanka </h2>
 						</div>
 						<hr />
 						<a href="#" class="sub-menu-link">
