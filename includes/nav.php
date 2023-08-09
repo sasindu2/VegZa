@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,7 +56,7 @@
 							<p>Help & support</p>
 							<span>></span>
 						</a>
-						<a href="#" class="sub-menu-link">
+						<a href="includes/logout.php" class="sub-menu-link">
 							<img src="img/log-out-circle-solid-24.png" alt="" />
 							<p>Log out</p>
 							<span>></span>
