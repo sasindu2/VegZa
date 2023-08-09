@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config.php';
 
 $userName = $_POST['usersName'];
@@ -11,6 +12,7 @@ $statment = $connection->prepare($sql);
 $statment->bind_param("sss", $userName, $userEmail, $userPwd);
 
 if ($statment->execute()) {
+   $_SESSION['userName'] = $usersName;
    header("Location: ../login.php");
    exit;
 } else {

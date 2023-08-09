@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,15 +24,15 @@
 
 			<div class="form-box login">
 				<h2>Login</h2>
-				<form action="home.php" method="post">
+				<form action="includes/login.inc.php" method="post">
 					<div class="input-box">
 						<span class="icon"><ion-icon name="mail"></ion-icon> </span>
-						<input type="text" name="email" required />
+						<input type="text" name="usersEmail" required />
 						<label>Email</label>
 					</div>
 					<div class="input-box">
 						<span class="icon"><ion-icon name="lock"></ion-icon> </span>
-						<input type="password" name="password" required />
+						<input type="password" name="usersPwd" required />
 						<label>Password</label>
 					</div>
 					<div class="remember-forgot">
