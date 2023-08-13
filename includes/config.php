@@ -16,8 +16,14 @@ if ($connection->connect_error) {
 
 function is_logged_in()
 {
-   $uname = $_SESSION["uname"];
-   $pw = $_SESSION["pw"];
+   return isset($_SESSION["usersEmail"]);
+}
 
-   return true;
+function get_user_data()
+{
+   global $connection;
+   $email = $_SESSION["usersEmail"];
+   $sql = "SELECT * FROM users WHERE usersEmail = '$email'";
+   $res = $connection->query($sql);
+   return $res->fetch_assoc();
 }
