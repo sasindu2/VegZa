@@ -2,6 +2,7 @@
 session_start();
 
 require_once  __DIR__ . '/includes/config.php';
+$is_logged = isset($_SESSION["usersEmail"]);
 ?>
 
 <!DOCTYPE html>
@@ -31,9 +32,17 @@ require_once  __DIR__ . '/includes/config.php';
 
       <!-- profile-->
       <div class="profile">
-
          <img src="img/profile img.jpg" class="user-pic" onclick="toggleMenu()" />
-         <span>kasun thiwanka</span>
+         <?php if ($is_logged) {
+            $email = $_SESSION["usersEmail"];
+            $sql = "SELECT * FROM users where `usersEmail` = '$email'";
+            $res = $connection->query($sql);
+            $row = $res->fetch_array();
+         ?>
+            <span><?php echo $row["usersName"] ?></span>
+         <?php } else { ?>
+            <a href="./login.php">Login</a>
+         <?php } ?>
 
          <div class="sub-menu-swap" id="subMenu">
             <div class="sub-menu">
