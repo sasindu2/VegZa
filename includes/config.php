@@ -1,5 +1,6 @@
 <?php
 $env = parse_ini_file(__DIR__ . '/../.env');
+define("HOME", "/vegza");
 
 $servername = $env["SERVER"];
 $username = $env["USERNAME"];
