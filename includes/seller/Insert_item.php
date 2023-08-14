@@ -61,7 +61,8 @@
                     <label for="product_cat" class="col-md-4 col-form-label text-md-right">Product Categories:</label>
                     <div class="col-md-8">
                         <select id="product_cat" name="product_cat" class="form-control" required>
-                            <option value="" disabled selected>Select a Category</option>
+                            <option value="" enable selected>Vegitable</option>
+                            <option value="" enable selected>Fruit</option>
                             <!-- Add options dynamically from PHP code -->
                         </select>
                     </div>
