@@ -1,3 +1,41 @@
+<?php
+ include '../config.php';
+ if(isset($_POST['insert_product'])){
+
+    $product_title=$_POST['product_title'];
+    $product_stock=$_POST['product_stock'];
+    $categories_id=$_POST['categories_id'];
+    $product_expiry=$_POST['product_expiry'];
+    $product_price=$_POST['product_price'];
+    $product_description=$_POST['product_description'];
+    
+
+    // accessing images
+    $product_image=$_FILES['product_image']['name'];
+
+    // accessing image tmp name
+    $tmp_image=$_FILES['product_image']['tmp_name'];
+
+    //checking empty condition
+    if( $product_title=='' or $product_stock=='' or $categories_id=='' or $product_price=='' or $product_desc=='' or $product_image==''){
+        echo "<script> alert('Please fill all the available fields')</script>";
+        exit();
+    }else{
+        move_uploaded_file($tmp_image,"../product_images/$product_image");
+
+        //insert query
+        $insert_product="insert into `products` (product_title,product_stock,categories_id,product_expiry,product_image,product_price,product_description,date) values('$product_title','$product_stock','$categories_id','$product_image','$product_price','$product_description'),NOW()";
+
+        $result_query=mysqli_query($con,$insert_product);
+        if($result_query){
+            echo "<script> alert('Successfully insert the product')</script>";
+        }
+
+    }
+
+ }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +82,7 @@
     <div class="container">
         <div class="my-form">
             <h4>Insert New Product</h4>
-            <form name="my-form" action="InsertProduct.php" method="post" enctype="multipart/form-data">
+            <form name="my-form" action="Insert_item.php" method="post" enctype="multipart/form-data">
                 <div class="form-group row">
                     <label for="product_title" class="col-md-4 col-form-label text-md-right">Product Title:</label>
                     <div class="col-md-8">
@@ -60,13 +98,13 @@
                 <div class="form-group row">
                     <label for="product_cat" class="col-md-4 col-form-label text-md-right">Product Categories:</label>
                     <div class="col-md-8">
-                        <select id="product_cat" name="product_cat" class="form-control" required>
+                        <select id="product_cat" name="categories_id" class="form-control" required>
                             <option value="" enable selected>Vegitable</option>
                             <option value="" enable selected>Fruit</option>
                             <!-- Add options dynamically from PHP code -->
                         </select>
                     </div>
-                </div>
+               </div>
                 <div class="form-group row">
                     <label for="product_type" class="col-md-4 col-form-label text-md-right">Product Type:</label>
                     <div class="col-md-8">
@@ -92,15 +130,15 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="product_desc" class="col-md-4 col-form-label text-md-right">Product Description:</label>
+                    <label for="product_description" class="col-md-4 col-form-label text-md-right">Product Description:</label>
                     <div class="col-md-8">
-                        <textarea id="product_desc" class="form-control" name="product_desc" rows="4" placeholder="Enter Product Description" required></textarea>
+                        <textarea id="product_description" class="form-control" name="product_description" rows="4" placeholder="Enter Product Description" required></textarea>
                     </div>
                 </div>
                 <!-- Add more fields and functionalities as needed -->
                 <div class="form-group row">
                     <div class="col-md-8 offset-md-4">
-                        <button type="submit" class="btn btn-primary" name="insert_pro">INSERT</button>
+                        <button type="submit" class="btn btn-primary" name="insert_product">INSERT</button>
                     </div>
                 </div>
             </form>
