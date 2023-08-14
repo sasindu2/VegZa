@@ -22,13 +22,13 @@ if ($is_logged) {
    </ul>
 
    <!-- profile-->
-   <div class="profile">
+   <div class="profile" onclick="toggleMenu()" >
 
       <?php
       if ($is_logged) {
       ?>
-         <img src="img/profile img.jpg" class="user-pic" onclick="toggleMenu()" />
-         <span><?php echo $user["usersName"] ?></span>
+         <img src="img/profile img.jpg" class="user-pic"  />
+         <span><?php echo $user["usersName"] ?>  </span>
 
          <div class="sub-menu-swap" id="subMenu">
             <div class="sub-menu">
@@ -40,27 +40,27 @@ if ($is_logged) {
                <a href="#" class="sub-menu-link">
                   <img src="img/user-circle-solid-24.png" alt="" />
                   <p>Edit profile</p>
-                  <span>></span>
+                  
                </a>
                <a href="#" class="sub-menu-link">
                   <img src="img/cart-download-solid-24.png" alt="" />
-                  <p>create seller account</p>
-                  <span>></span>
+                  <p>Seller account</p>
+                  
                </a>
                <a href="#" class="sub-menu-link">
                   <img src="img/cog-solid-24.png" alt="" />
                   <p>Settings & privacy</p>
-                  <span>></span>
+                  
                </a>
                <a href="#" class="sub-menu-link">
                   <img src="img/help-circle-solid-24.png" alt="" />
                   <p>Help & support</p>
-                  <span>></span>
+                  
                </a>
                <a href="includes/logout.php" class="sub-menu-link">
                   <img src="img/log-out-circle-solid-24.png" alt="" />
                   <p>Log out</p>
-                  <span>></span>
+                  
                </a>
             </div>
          </div>
