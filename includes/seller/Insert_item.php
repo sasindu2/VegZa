@@ -1,5 +1,6 @@
 <?php
- include '../config.php';
+ require_once '../config.php';
+
  if(isset($_POST['insert_product'])){
 
     $product_title=$_POST['product_title'];
@@ -9,28 +10,20 @@
     $product_price=$_POST['product_price'];
     $product_description=$_POST['product_description'];
     
-
-    // accessing images
     $product_image=$_FILES['product_image']['name'];
-
-    // accessing image tmp name
     $tmp_image=$_FILES['product_image']['tmp_name'];
-
-    // var_dump($_POST);
-    // exit;
-
-    //checking empty condition
+    
     if( $product_title=='' or $product_stock=='' or $categories_id=='' or $product_price=='' or $product_description==''){
         echo "<script> alert('Please fill all the available fields')</script>";
         exit();
     }else{
-        move_uploaded_file($tmp_image,"../product_images/$product_image");
-
+        
         //insert query
-        $insert_product="insert into `products` (product_title,product_stock,categories_id,product_expiry,product_image,product_price,product_description,date) values('$product_title','$product_stock','$categories_id','$product_expiry','$product_image','$product_price','$product_description'),NOW()";
-
-        $result_query=mysqli_query($con,$insert_product);
+        $insert_product="INSERT INTO `products` (product_title,product_stock,categories_id,product_expiry,product_image,product_price,product_description,date) values('$product_title','$product_stock','$categories_id','$product_expiry','$product_image','$product_price','$product_description',NOW())";
+        
+        $result_query=mysqli_query($connection, $insert_product);
         if($result_query){
+            move_uploaded_file($tmp_image,"../product_images/$product_image");
             echo "<script> alert('Successfully insert the product')</script>";
         }
 
@@ -102,8 +95,8 @@
                     <label for="product_cat" class="col-md-4 col-form-label text-md-right">Product Categories:</label>
                     <div class="col-md-8">
                         <select id="product_cat" name="categories_id" class="form-control" required>
-                            <option value="vegetable" enable selected>Vegitable</option>
-                            <option value="fruit">Fruit</option>
+                            <option value="0" selected>Vegitable</option>
+                            <option value="1">Fruit</option>
                             <!-- Add options dynamically from PHP code--> 
                         </select>
                     </div>
