@@ -10,6 +10,8 @@ $port = $env["PORT"];
 
 $connection = new mysqli($servername, $username, $password, $database_name, $port);
 
+
+
 if ($connection->connect_error) {
    die("Connection error");
 }

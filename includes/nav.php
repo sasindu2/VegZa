@@ -42,7 +42,7 @@ if ($is_logged) {
                   <p>Edit profile</p>
                   
                </a>
-               <a href="#" class="sub-menu-link">
+               <a href="includes/seller/Insert_item.php" class="sub-menu-link">
                   <img src="img/cart-download-solid-24.png" alt="" />
                   <p>Seller account</p>
                   
