@@ -16,15 +16,18 @@
     // accessing image tmp name
     $tmp_image=$_FILES['product_image']['tmp_name'];
 
+    // var_dump($_POST);
+    // exit;
+
     //checking empty condition
-    if( $product_title=='' or $product_stock=='' or $categories_id=='' or $product_price=='' or $product_desc=='' or $product_image==''){
+    if( $product_title=='' or $product_stock=='' or $categories_id=='' or $product_price=='' or $product_description==''){
         echo "<script> alert('Please fill all the available fields')</script>";
         exit();
     }else{
         move_uploaded_file($tmp_image,"../product_images/$product_image");
 
         //insert query
-        $insert_product="insert into `products` (product_title,product_stock,categories_id,product_expiry,product_image,product_price,product_description,date) values('$product_title','$product_stock','$categories_id','$product_image','$product_price','$product_description'),NOW()";
+        $insert_product="insert into `products` (product_title,product_stock,categories_id,product_expiry,product_image,product_price,product_description,date) values('$product_title','$product_stock','$categories_id','$product_expiry','$product_image','$product_price','$product_description'),NOW()";
 
         $result_query=mysqli_query($con,$insert_product);
         if($result_query){
@@ -99,18 +102,18 @@
                     <label for="product_cat" class="col-md-4 col-form-label text-md-right">Product Categories:</label>
                     <div class="col-md-8">
                         <select id="product_cat" name="categories_id" class="form-control" required>
-                            <option value="" enable selected>Vegitable</option>
-                            <option value="" enable selected>Fruit</option>
-                            <!-- Add options dynamically from PHP code -->
+                            <option value="vegetable" enable selected>Vegitable</option>
+                            <option value="fruit">Fruit</option>
+                            <!-- Add options dynamically from PHP code--> 
                         </select>
                     </div>
                </div>
-                <div class="form-group row">
+               <!-- <div class="form-group row">
                     <label for="product_type" class="col-md-4 col-form-label text-md-right">Product Type:</label>
                     <div class="col-md-8">
                         <input type="text" id="product_type" class="form-control" name="product_type" placeholder="Enter Product Type" required>
                     </div>
-                </div>
+                </div>-->
                 <div class="form-group row">
                     <label for="product_expiry" class="col-md-4 col-form-label text-md-right">Product Expiry:</label>
                     <div class="col-md-8">
