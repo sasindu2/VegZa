@@ -52,10 +52,7 @@
       <div class="about-text">
          <span>About Us</span>
          <p>
-            Welcome to our vegetable buy and sell website! We are a team of passionate individuals who believe that
-            everyone should have access to fresh, healthy and affordable vegetables. Our mission is to connect farmers and
-            buyers directly, providing a platform for farmers to sell their produce and for buyers to purchase
-            high-quality vegetables at competitive prices
+         Welcome to VegZa, your ultimate destination for fresh and affordable vegetables. We are a dedicated team of individuals who believe that everyone deserves access to wholesome produce. Our platform brings together local farmers and enthusiastic buyers, fostering a direct connection that benefits both communities. At VegZa, we're committed to supporting local agriculture, promoting transparency, and making your vegetable shopping experience convenient and delightful. Join us in celebrating the joy of farm-fresh goodness, one order at a time.
          </p>
          <a href="categories-veg.html" class="btn-shop">Learn More <i class="bx bx-right-arrow-alt"></i></a>
       </div>
@@ -76,13 +73,11 @@
                <i class="bx bxs-star-half"></i>
             </div>
             <p>
-               Customers appreciate the freshness of the vegetables that are sold on the website. Since the vegetables
-               are sourced directly from the farmers, they are often picked and delivered within a short time frame,
-               which ensures their quality and flavor.
+               "As a busy mom, I appreciate the convenience VegZa brings to my life. I can shop for veggies from my couch, and they're delivered right to my doorstep. The freshness is unbeatable!"
             </p>
             <div class="review-profile">
                <img src="img/review img 2.jpg" alt="" />
-               <h3>Michele Stef</h3>
+               <h3>Kamala De Silva</h3>
             </div>
          </div>
          <!--Review 2-->
@@ -96,13 +91,11 @@
                <i class="bx bxs-star-half"></i>
             </div>
             <p>
-               Customers enjoy the wide variety of vegetables that are available on the website. They can browse through
-               different types of vegetables, including rare and exotic ones, and choose the ones that meet their needs
-               and preferences.
+            "VegZa has made my life so much easier. I used to spend hours at the grocery store, but now I can order fresh vegetables online without any hassle. Plus, their quality is top-notch!"
             </p>
             <div class="review-profile">
                <img src="img/review img 1.jpg" alt="" />
-               <h3>Rose star</h3>
+               <h3>Rochell Rogers</h3>
             </div>
          </div>
          <!--Review 3-->
@@ -116,13 +109,11 @@
                <i class="bx bxs-star-half"></i>
             </div>
             <p>
-               Customers value the quality of the vegetables sold on the website. Since the farmers who sell on the
-               platform are often small-scale and use sustainable and organic growing methods, the vegetables are often
-               of higher quality than those found in supermarkets
+            "I've always been conscious about where my food comes from. VegZa's transparency about sourcing and the farmers behind the produce gives me peace of mind. It's a platform I can trust."
             </p>
             <div class="review-profile">
                <img src="img/review img 3.jfif" alt="" />
-               <h3>Michele Stef</h3>
+               <h3>Milan Abeykoon</h3>
             </div>
          </div>
       </div>
