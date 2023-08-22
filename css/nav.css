@@ -24,6 +24,7 @@ header {
 	transition: 0.5s;
 }
 .profile {
+	margin-left: 20px;
 	display: flex;
 	align-items: center;
 	column-gap: 0.5rem;
@@ -53,7 +54,7 @@ header {
 	color: rgb(23, 24, 24);
 	text-decoration: none;
 	font-weight: 500;
-	margin: 40px;
+	margin: 20px;
 	padding: 0.5rem 1rem;
 }
 .navigation a::after {

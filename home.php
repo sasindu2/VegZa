@@ -23,7 +23,7 @@
             <div class="home-text">
                <span>We Are VegZa</span>
                <h1>
-                  Choose vegitable <br />
+                  Choose <br /> vegitable <br />
 
                </h1>
                <a href="categories-veg.php" class="btn-shop">Shop Now <i class="bx bx-right-arrow-alt"></i></a>
