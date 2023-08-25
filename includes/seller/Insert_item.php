@@ -78,6 +78,7 @@
     <div class="container">
         <div class="my-form">
             <h4>Insert New Product</h4>
+            
             <form name="my-form" action="Insert_item.php" method="post" enctype="multipart/form-data">
                 <div class="form-group row">
                     <label for="product_title" class="col-md-4 col-form-label text-md-right">Product Title:</label>
@@ -135,7 +136,9 @@
                 <div class="form-group row">
                     <div class="col-md-8 offset-md-4">
                         <button type="submit" class="btn btn-primary" name="insert_product">INSERT</button>
+                        <button> <a href="../../home.php">Back to home page</a> </button>
                     </div>
+                    
                 </div>
             </form>
         </div>

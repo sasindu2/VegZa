@@ -10,16 +10,25 @@ if ($is_logged) {
 }
 ?>
 <header>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
    <div class="logo">
       <img src="img/logo.jpg" alt="Logo" />
    </div>
    <ul class="navigation">
       <a href="#home" class="home-active">Home</a>
       <a href="#categories">Categories</a>
-
       <a href="#about">About</a>
       <a href="#customers">Customers</a>
    </ul>
+  <!-- <div class="mobmenu">
+      <h3>Menu</h3>
+      <ul class="navigation">
+      <a href="#home" class="home-active">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+      <a href="#customers">Customers</a>
+   </ul>
+   </div> -->
 
    <!-- profile-->
    <div class="profile" onclick="toggleMenu()" >

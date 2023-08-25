@@ -17,66 +17,24 @@
 			<!--Container content-->
 			<div class="categories-fruit">
 				<!--Box 1-->
-				<div class="box">
-					<img src="img/pineapple.jpg" alt="" />
-					<span>Fresh Pineapple</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
-				<!--Box 2-->
-				<div class="box">
-					<img src="img/strawberry.jpg" alt="" />
-					<span>Fresh Pineapple</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
+				<?php
+            $q = "SELECT * FROM products WHERE categories_id = 1 LIMIT 20";
+            $res = $connection->query($q);
 
-				<!--Box 3-->
-				<div class="box">
-					<img src="img/papaya.jpg" alt="" />
-					<span>Fresh Pineapple</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
-				<!--Box 4-->
-				<div class="box">
-					<img src="img/pineapple.jpg" alt="" />
-					<span>Fresh Pineapple</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
-				<!--Box 5-->
-				<div class="box">
-					<img src="img/pineapple.jpg" alt="" />
-					<span>Fresh Pineapple</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
-				<!--Box 6-->
-				<div class="box">
-					<img src="img/pineapple.jpg" alt="" />
-					<span>Fresh Pineapple</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
+            while($row = $res->fetch_assoc()){
+               ?>
+               <div class="box">
+                  <img src="<?php echo HOME . "/includes/product_images/" . $row["product_image"]?>" alt="" />
+                  <span><?php echo $row["product_title"]?></span>
+                  <h2><?php echo $row["product_description"]?></h2>
+                  <h3 class="price"><?php echo $row["product_price"]?><span>/kg</span></h3>
+                  <i class="bx bx-cart-alt"></i>
+                  <i class="bx bx-heart"></i>
+                  <span class="discount">-25%</span>
+               </div>
+               <?php
+            }
+            ?>
 			</div>
 		</section>
 
