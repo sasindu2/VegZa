@@ -21,7 +21,7 @@ include_once "./includes/config.php";
 			<div class="categories-vegitable">
 				<!--Box 1-->
             <?php
-            $q = "SELECT * FROM products LIMIT 20";
+            $q = "SELECT * FROM products WHERE categories_id = 0 LIMIT 20";
             $res = $connection->query($q);
 
             while($row = $res->fetch_assoc()){

@@ -139,3 +139,5 @@ header {
 .sub-menu-link:hover p {
 	font-weight: 600;
 }
+@media screen and (max-width: 600px )
+ .cont
