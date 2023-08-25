@@ -1,3 +1,6 @@
+<?php
+include_once "./includes/config.php";
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,66 +20,24 @@
 			<!--Container content-->
 			<div class="categories-vegitable">
 				<!--Box 1-->
-				<div class="box">
-					<img src="img/carrot.jpg" alt="" />
-					<span>Fresh carrot</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
-				<!--Box 2-->
-				<div class="box">
-					<img src="img/chili.jpg" alt="" />
-					<span>Fresh Chili</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
+            <?php
+            $q = "SELECT * FROM products LIMIT 20";
+            $res = $connection->query($q);
 
-				<!--Box 3-->
-				<div class="box">
-					<img src="img/cabbage.jpg" alt="" />
-					<span>Fresh cabbage</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
-				<!--Box 4-->
-				<div class="box">
-					<img src="img/Cauliflower.jpg" alt="" />
-					<span>Fresh Cauliflower</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
-				<!--Box 5-->
-				<div class="box">
-					<img src="img/garlic.jpg" alt="" />
-					<span>Fresh garlic</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
-				<!--Box 6-->
-				<div class="box">
-					<img src="img/okra.jpg" alt="" />
-					<span>Fresh okra</span>
-					<h2>Farm fresh organic <br />Available fruits 1kg</h2>
-					<h3 class="price">rs.400<span>/kg</span></h3>
-					<i class="bx bx-cart-alt"></i>
-					<i class="bx bx-heart"></i>
-					<span class="discount">-25%</span>
-				</div>
+            while($row = $res->fetch_assoc()){
+               ?>
+               <div class="box">
+                  <img src="<?php echo HOME . "/includes/product_images/" . $row["product_image"]?>" alt="" />
+                  <span><?php echo $row["product_title"]?></span>
+                  <h2><?php echo $row["product_description"]?></h2>
+                  <h3 class="price"><?php echo $row["product_price"]?><span>/kg</span></h3>
+                  <i class="bx bx-cart-alt"></i>
+                  <i class="bx bx-heart"></i>
+                  <span class="discount">-25%</span>
+               </div>
+               <?php
+            }
+            ?>
 			</div>
 		</section>
 
