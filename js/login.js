@@ -17,5 +17,6 @@ buttonPopup.addEventListener("click", () => {
 });
 
 iconClose.addEventListener("click", () => {
+	console.log('Clicked');
 	wrapper.classList.remove("active-popup");
 });

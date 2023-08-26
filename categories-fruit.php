@@ -27,7 +27,7 @@
                   <img src="<?php echo HOME . "/includes/product_images/" . $row["product_image"]?>" alt="" />
                   <span><?php echo $row["product_title"]?></span>
                   <h2><?php echo $row["product_description"]?></h2>
-                  <h3 class="price"><?php echo $row["product_price"]?><span>/kg</span></h3>
+                  <h3 class="price">Rs.<?php echo $row["product_price"]?><span>/kg</span></h3>
                   <i class="bx bx-cart-alt"></i>
                   <i class="bx bx-heart"></i>
                   <span class="discount">-25%</span>
