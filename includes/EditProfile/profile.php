@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+require_once '../config.php';
+
+$is_logged = is_logged_in();
+$user = null;
+if ($is_logged) {
+   $user = get_user_data();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,11 +103,12 @@
   <form>
     <div class="profile-picture">
       <img src="profile-picture.jpg">
+      <input type="file" name="profile_img">
     </div>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="Kamal Perera">
+    <input type="text" id="name" name="name" value="<?php echo $user["usersName"] ?>">
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" value="kamalperera123@gmail.com">
+    <input type="email" id="email" name="email" value="<?php echo $user["usersEmail"] ?>">
     <label for="phone">Phone Number:</label>
     <input type="tel" id="phone" name="phone" value="077-2288119">
     <label for="account">Account Number:</label>

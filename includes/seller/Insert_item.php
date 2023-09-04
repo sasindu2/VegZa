@@ -67,6 +67,7 @@
         .my-form .btn-primary {
             background-color: #4caf50; /* Green color for the button */
             border-color: #4caf50; /* Green color for the button border */
+            
         }
         .my-form .btn-primary:hover {
             background-color: #45a049; /* Slightly darker shade on hover */
@@ -136,7 +137,7 @@
                 <div class="form-group row">
                     <div class="col-md-8 offset-md-4">
                         <button type="submit" class="btn btn-primary" name="insert_product">INSERT</button>
-                        <button> <a href="../../home.php">Back to home page</a> </button>
+                        <button class="btn btn-primary"> <a href="../../home.php">Back to home page</a> </button>
                     </div>
                     
                 </div>
