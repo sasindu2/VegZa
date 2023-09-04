@@ -5,6 +5,15 @@ require_once '../config.php';
 
 $is_logged = is_logged_in();
 $user = null;
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+   $userID = $_POST["user_id"];
+   $userName = $_POST["name"];
+   $userPhone = $_POST["phone"];
+   $q = "UPDATE users SET usersName = '$userName', phone_number = '$userPhone' WHERE Id = '$userID'";
+   mysqli_query($connection, $q);
+}
+
 if ($is_logged) {
    $user = get_user_data();
 }
@@ -100,24 +109,25 @@ if ($is_logged) {
 <body>
 <div class="container">
   <h1>Edit Profile</h1>
-  <form>
+  <form method="post">
     <div class="profile-picture">
       <img src="profile-picture.jpg">
       <input type="file" name="profile_img">
     </div>
     <label for="name">Name:</label>
+    <input type="hidden" name="user_id" value="<?php echo $user["Id"] ?>">
     <input type="text" id="name" name="name" value="<?php echo $user["usersName"] ?>">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" value="<?php echo $user["usersEmail"] ?>">
+    <!-- <label for="email">Email:</label> -->
+    <!-- <input type="email" id="email" name="email" value="<?php echo $user["usersEmail"] ?>"> -->
     <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" value="077-2288119">
+    <input type="tel" id="phone" name="phone" value="<?php echo $user["phone_number"] ?>">
     <label for="account">Account Number:</label>
-    <input type="text" id="account" name="account" value="1234567890">
+    <input type="text" id="account" name="account" value="<?php echo $user["account_number"] ?>">
     <label for="address">Address:</label>
-    <input type="text" id="address" name="address" value="123 Main St, Badulla road, Bandarawela">
+    <input type="text" id="address" name="address" value="<?php echo $user["address"] ?>">
     <div class="button-container">
-      <button class="clear-button">Clear Form</button>
-      <button class="save-button">Save</button>
+      <button type="reset" class="clear-button">Clear Form</button>
+      <button type="submit" class="save-button">Save</button>
     </div>
   </form>
 </div>
