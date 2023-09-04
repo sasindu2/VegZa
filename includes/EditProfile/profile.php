@@ -10,7 +10,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    $userID = $_POST["user_id"];
    $userName = $_POST["name"];
    $userPhone = $_POST["phone"];
-   $q = "UPDATE users SET usersName = '$userName', phone_number = '$userPhone' WHERE Id = '$userID'";
+   $userAccount = $_POST["account"];
+   $userAddress = $_POST["address"];
+   
+   $q = "UPDATE users SET usersName = '$userName', phone_number = '$userPhone', account_number = '$userAccount', address = '$userAddress' WHERE Id = '$userID'";
    mysqli_query($connection, $q);
 }
 
