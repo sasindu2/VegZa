@@ -46,7 +46,7 @@ if ($is_logged) {
                   <h2> <?php echo $user["usersName"] ?> </h2>
                </div>
                <hr />
-               <a href="#" class="sub-menu-link">
+               <a href="includes/EditProfile/profile.php" class="sub-menu-link">
                   <img src="img/user-circle-solid-24.png" alt="" />
                   <p>Edit profile</p>
                   
